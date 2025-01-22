@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch Me If You Can!</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        
+        #runaway-btn {
+            position: relative;
+            padding: 30px 50px;
+            background-color: #ff4444;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s;
+            z-index: 1000;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 50px;
+        }
+
+        .gif-left {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            width: 250px; /* Riduci le dimensioni della GIF */
+            height: auto;
+        }
+        
+        /* Posizionamento della GIF a destra */
+        .gif-right {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            width: 250px; /* Riduci le dimensioni della GIF */
+            height: auto;
+        }
+
+        /* Posizionamento della GIF in alto */
+        .gif-top {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 250px; /* Riduci le dimensioni della GIF */
+            height: auto;
+            z-index: 500; /* Z-index inferiore per mantenere le GIF dietro */
+        }
+
+        /* Posizionamento della GIF in basso */
+        .gif-bottom {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 250px; /* Riduci le dimensioni della GIF */
+            height: auto;
+            z-index: 500; /* Z-index inferiore per mantenere le GIF dietro */
+        }
+    </style>
+</head>
+<body>
+    <h1>Ciao amore voglio farti una proposta 
+        vuoi sapere la mia proposta?
+    </h1>
+    <button id="runaway-btn">SCI</button>
+
+    <!-- GIF posizionata a sinistra -->
+    <img src="./cat1.gif" alt="Cat Left" class="gif-left">
+
+    <!-- GIF posizionata a destra -->
+    <img src="./cat2.gif" alt="Cat Right" class="gif-right">
+
+    <!-- GIF posizionata in alto -->
+    <img src="./cat3.gif" alt="Cat Top" class="gif-top">
+
+    <!-- GIF posizionata in basso -->
+    <img src="./cat4.gif" alt="Cat Bottom" class="gif-bottom">
+
+
+    <script>
+        const button = document.getElementById('runaway-btn');
+        let moves = 0;
+        const phrases = [
+            "Si", "Siiii!", "SIIIIII!", "AHAHA!", 
+            "MEOMEOMEO!", "NUUUUUUU!", "MI REGALI UN GATTINO??!", "NERO NERO", 
+            "E SCEMO!", "COMUNQUE", "HO PREPARATO UNA PRESENTAZIONE", "DA BRAVO INDUSTRIALE", 
+            "QUALE SONO", "VUOI VEDERE??????", "SCI!"
+        ];
+        
+        button.addEventListener('mouseover', () => {
+            if (moves < 15) {
+                const maxX = window.innerWidth - button.clientWidth;
+                const maxY = window.innerHeight - button.clientHeight;
+                
+                const randomX = Math.floor(Math.random() * maxX);
+                const randomY = Math.floor(Math.random() * maxY);
+                
+                button.style.position = 'absolute';
+                button.style.left = randomX + 'px';
+                button.style.top = randomY + 'px';
+                
+                button.textContent = phrases[moves];
+                moves++;
+            }
+        });
+        
+        button.addEventListener('click', () => {
+            if (moves >= 15) {
+                window.location.href = "victory.html";
+            }
+        });
+    </script>
+</body>
+</html>

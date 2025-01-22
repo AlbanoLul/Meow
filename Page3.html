@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ottima scelta amore!!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh; /* Imposta l'altezza della pagina */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Sezione superiore (sfondo senza testo) */
+        .header {
+            flex: 1; /* Occupa metà della pagina (superiore) */
+            background-image: url('./sfondo.jpg'); /* Immagine di sfondo */
+            background-size: cover;
+            background-position: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Linea rosa separatrice */
+        .separator {
+            height: 4px; /* Altezza della linea rosa */
+            background-color: pink; /* Colore della linea rosa */
+        }
+
+        /* Sezione inferiore con il testo */
+        .footer {
+            background-color: white; /* Colore di sfondo bianco */
+            color: black; /* Colore del testo */
+            padding: 20px;
+            flex: 1; /* Occupa la seconda metà della pagina (inferiore) */
+            overflow-y: auto; /* Permette lo scroll se il contenuto è troppo lungo */
+        }
+
+        /* Styling del titolo */
+        h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        p, ul {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <!-- Sezione immagine di sfondo, senza contenuti di testo -->
+    </div>
+
+    <!-- Linea rosa separatrice -->
+    <div class="separator"></div>
+
+    <!-- Sezione inferiore con tutte le scritte -->
+    <div class="footer">
+        <h1>Ottima scelta amore!!</h1>
+        <p>Info importanti:</p>
+        <ul>
+            <li>- Il volo migliore parte giovedì alle 19.05 da Torino per tornare poi domenica mattina :(</li>
+            <li>- Prezzo è di circa 105€/persona contando solo una valigia in stiva, la tua! Meomeo.</li>
+            <li>- Io sarei contento di andare con te dai cammelli, compriamo un cammello vero che gli fa compagnia al pupazzo sotto, magari anche un polipo vero, vediamo, non sho adesso.</li>
+        </ul>
+        <p>Ho guardato un po' di posti, questo è il mio preferito: <a href="https://www.booking.com/hotel/ma/riad-kenzo.it.html?label=gog235jc-1DCAYojAE4mANIFFgDaHGIAQGYARS4ARfIAQzYAQPoAQH4AQKIAgGoAgO4ArOcw7wGwAIB0gIkNjVhNzViNWItZDkzOC00MzEwLWI0NTktNjBjMTRkMjJlZTQw2AIE4AIB&sid=30bf0e51c9a8e5c44a2ed10bc912d8c0&aid=356980&ucfs=1&checkin=2025-03-06&checkout=2025-03-09&dest_id=13309&dest_type=region&group_adults=2&no_rooms=1&group_children=0&nflt=ht_id%3D227&matching_block_id=25877208_88804690_0_41_0&atlas_src=sr_iw_title">Riad Kenzo - Marrakech</a></p>
+        <p>Poi dopo ne guardiamo un po asshieme</p>
+        <p>Il mio sito che mi sono tanto divertito a fare non supporta ancora i pagamenti con carta ma sono certo che puoi trovare una soluzione se ti impegni</p>
+    </div>
+</body>
+</html>

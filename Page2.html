@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta di Viaggi</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Contenitore principale */
+        .container {
+            display: flex;
+            height: 100vh; /* L'altezza della finestra */
+        }
+
+        /* Prima metà della pagina (Marocco) */
+        .half {
+            flex: 1; /* Dividi in due metà uguali */
+            background-image: url('marocco.gif'); /* Percorso relativo alla stessa cartella */
+            background-size: cover; /* Adatta la GIF all'intera area */
+            background-position: center; /* Posiziona la GIF al centro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+            position: relative;
+        }
+
+        /* Seconda metà della pagina (Parigi) */
+        .half.right {
+            background-image: url('parigi.gif'); /* Percorso relativo alla stessa cartella */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Aggiunta della linea nera che separa le due sezioni */
+        .divider {
+            width: 2px; /* Larghezza della linea */
+            background-color: pink; /* Colore della linea */
+            height: 100%; /* Altezza che copre tutta la pagina */
+            position: absolute;
+            left: 50%; /* Posizione centrale tra le due metà */
+            top: 0;
+        }
+
+        /* Styling per il testo */
+        h1 {
+            margin-bottom: 20px;
+            font-size: 30px;
+            position: relative;
+        }
+
+        /* Link (parole cliccabili) */
+        a {
+            color: rgb(255, 206, 222); /* Colore del link */
+            font-size: 35px; /* Dimensione del testo */
+            text-decoration: none; /* Rimuovi sottolineatura */
+            font-weight: bold; /* Aumenta la visibilità */
+            padding: 10px 20px;
+            background-color: transparent; /* Colore di sfondo semitrasparente */
+            border-radius: 5px;
+        }
+
+        /* Effetto hover per i link */
+        a:hover {
+            background-color: rgba(0, 0, 0, 0.7); /* Cambia colore quando il mouse è sopra */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sezione Marocco -->
+        <div class="half">
+            <div>
+                <h1><a href="marocco.html">Marocco</a></h1>
+            </div>
+        </div>
+
+        <!-- Divider (linea nera) -->
+        <div class="divider"></div>
+
+        <!-- Sezione Parigi -->
+        <div class="half right">
+            <div>
+                <h1><a href="parigi.html">Parigi</a></h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
